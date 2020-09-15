@@ -12,18 +12,37 @@ namespace Activity1Part3.Services.Data
 
         public bool FindByUser(UserModel user)
         {
-            string connectionString = "(localdb)\\MSSQLLocalDB";
-            string userName = user.UserName;
-            string password = user.Password;
-            string query = "select * from dbo.Users where USERNAME = 'test'";
+
+            string connectionString = "Server =.; Database = Test; Trusted_Connection = True";
+            string query = @"select rtrim(USERNAME) from dbo.Users where USERNAME = 'test'"; 
+            bool results = false;
+           
             using (SqlConnection conncetion = new SqlConnection(connectionString))
             {
+               
                 SqlCommand command = new SqlCommand(query, conncetion);
                 command.Connection.Open();
-                var results = command.ExecuteNonQuery();
-                //If results are == 1 return true, else false
-                if(results.)
+                SqlDataReader reader =  command.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    
+                    while (reader.Read())
+                    {
+                        // check what the valu returned is
+                        string value = reader.GetString(0);
+                        if (reader.GetString(0).Equals(user.UserName))
+                        {
+                           
+                            results = true;
+                        }
+
+                    }
+                }
+               
+
+                
             }
+            return results;
         }
     }
 }
