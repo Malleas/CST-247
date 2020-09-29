@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink((string)ViewBag.Title, "", "Test", new { area = "" }, new { @class = "Navbar-brand" })
+                <a href="http://www.gcu.edu" class="navbar-brand" target="_blank">GCU</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ui class="nav navbar-nav navbar-right">
+                    <a href="http://www.google.com" class="navbar-brand" target="_blank">Google</a>
+                    <a href="http://www.yahoo.com" class="navbar-brand" target="_blank">Yahoo</a>
+                </ui>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

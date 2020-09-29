@@ -6,50 +6,41 @@
 
 <!DOCTYPE html>
 
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Test</title>
-    <style>
-        table, th, td{
-            border: 1px solid black;
-        }
-    </style>
-</head>
-<body>
-    <div style="text-align: center">
-        @Html.Label("Welcome to Razor", new { @style = "font-weight: bold; font-style: Arial; font-size: 24px;" })
-     </div>
-    <div style="text-align: left">
-        @Html.Label("My Customers are:", new { @style = "font-weight: bold; font-style: Arial; font-size: 18px;" })
-        <br>
-        @Html.ActionLink("Refresh Page", "Index")
-        <br><br>
+@{
+    ViewBag.Title = "My App";
+    Layout = "~/Views/Shared/_MyDefaultLayout.cshtml";
+}
+<div style="text-align: center">
+    @Html.Label("Welcome to Razor", new { @style = "font-weight: bold; font-style: Arial; font-size: 24px;" })
+</div>
+<div style="text-align: left">
+    @Html.Label("My Customers are:", new { @style = "font-weight: bold; font-style: Arial; font-size: 18px;" })
+    <br>
+    @Html.ActionLink("Refresh Page", "Index")
+    <br><br>
 
 
-        <table>
-            <tr>
-                <th>Name</th>
-                <th>Email Address</th>
-                <th>Phone Number</th>
-            </tr>
-            
-                @foreach (var user in Model)
-                {
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Email Address</th>
+            <th>Phone Number</th>
+        </tr>
+
+        @foreach (var user in Model)
+        {
             <tr>
                 <td>@Html.DisplayFor(modelItem => user.Name)</td>
                 <td>@Html.DisplayFor(modelItem => user.EmailAddress)</td>
                 <td>@Html.DisplayFor(modelItem => user.PhoneNumber)</td>
             </tr>
-                    
-                  
-                }
 
-            
 
-        </table>
+        }
 
-        <lable style="text-align:center"></lable>
-    </div>
-</body>
-</html>
+
+
+    </table>
+
+    <lable style="text-align:center"></lable>
+</div>
