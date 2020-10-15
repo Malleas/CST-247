@@ -7,8 +7,15 @@
         HttpMethod = "POST",
         InsertionMode = InsertionMode.Replace,
         UpdateTargetId = "customerInfo",
+        OnSuccess = "ajaxSuccess"
     };
 }
+
+<script>
+    function ajaxSuccess() {
+        alert("Success")
+    }
+</script>
 
 @using (Ajax.BeginForm("OnSelectCustomer", "Customer", ajaxOptions, new { id = "customerForm" }))
 {
@@ -29,11 +36,10 @@
 
         @Html.RadioButton("CustomerNumber", customer.ID, selected, new { onchange = "$('#customerForm').trigger('submit')" });
         @Html.Label(customer.Name)
-        <script> $.post('@Url.Action("GetMoreInfo", "Customer")', { customer: 2}, function(data){ alert(data); });</script>
         <br />
     }
 
-    <input type="submit" id="SubmitButton" value="Display Details" />
+ 
 }
 
 <div id="customerInfo">
