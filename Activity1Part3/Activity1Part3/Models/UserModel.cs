@@ -18,6 +18,8 @@ namespace Activity1Part3.Models
             Id = id;
         }
 
+        public UserModel() { }
+
         [Required]
         [DisplayName("User Name")]
         [StringLength(20, MinimumLength =4)]

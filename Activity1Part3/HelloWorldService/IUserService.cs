@@ -22,6 +22,7 @@ namespace HelloWorldService
         string GetData(string value);
 
         [OperationContract]
+        [AspNetCacheProfile("CacheFor60Seconds")]
         [WebGet(ResponseFormat = WebMessageFormat.Json, UriTemplate = "GetAllUsers/")]
         UserDTO GetAllUsers();
 
