@@ -34,8 +34,10 @@ namespace HelloWorldService
         [WebGet(ResponseFormat = WebMessageFormat.Json, UriTemplate = "GetUserById/{id}")]
         UserDTO GetuserById(string id);
 
-        //  [OperationContract]
-        //  [WebGet(ResponseFormat = WebMessageFormat.Json, UriTemplate = "GetObjectModel/{id}")]
-        //  CompositeType GetObjectModel(string id);
+        [OperationContract]
+        [WebGet(ResponseFormat = WebMessageFormat.Json, UriTemplate = "GetObjectModel/{id}")]
+        CompositeType GetObjectModel(string id);
     }
 }
+
+   

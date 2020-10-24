@@ -52,6 +52,24 @@ namespace HelloWorldService
             throw new NotImplementedException();
         }
 
+
+        public CompositeType GetObjectModel(string id)
+        {
+            CompositeType composite = new CompositeType();
+
+            if(Int32.Parse(id) > 0)
+            {
+                composite.isHappy = true;
+                composite.helloMsg = "Have a great day!!";
+            }
+            else
+            {
+                composite.helloMsg = "Feel better, don't be sad!";
+            }
+
+            return composite;
+        }
+
         public UserDTO GetuserById(string id)
         {
             UserDTO userDTO = new UserDTO();
