@@ -27,11 +27,11 @@ namespace Benchmark.Services.Data
                 try
                 {
                     SqlCommand command = new SqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@testament", verse.Testament);
-                    command.Parameters.AddWithValue("@book", verse.Book);
-                    command.Parameters.AddWithValue("@chapterNumber", verse.ChapterNumber);
-                    command.Parameters.AddWithValue("@verseNumber", verse.VerseNumber);
-                    command.Parameters.AddWithValue("@verseText", verse.VerseText);
+                    command.Parameters.AddWithValue("@testament", verse.Testament.ToUpper());
+                    command.Parameters.AddWithValue("@book", verse.Book.ToUpper());
+                    command.Parameters.AddWithValue("@chapterNumber", verse.ChapterNumber.ToUpper());
+                    command.Parameters.AddWithValue("@verseNumber", verse.VerseNumber.ToUpper());
+                    command.Parameters.AddWithValue("@verseText", verse.VerseText.ToUpper());
                     command.Connection.Open();
                     command.ExecuteNonQuery();
                     logger.Info("Verse added successfully");
@@ -60,23 +60,23 @@ namespace Benchmark.Services.Data
 
             if (verse.Testament != null)
             {
-                testament = verse.Testament;
+                testament = verse.Testament.ToUpper();
             }
             if (verse.Book != null)
             {
-                book = verse.Book;
+                book = verse.Book.ToUpper();
             }
             if (verse.ChapterNumber != null)
             {
-                chapterNumber = verse.ChapterNumber;
+                chapterNumber = verse.ChapterNumber.ToUpper();
             }
             if (verse.VerseNumber != null)
             {
-                verseNumber = verse.VerseNumber;
+                verseNumber = verse.VerseNumber.ToUpper();
             }
             if (verse.VerseText != null)
             {
-                verseText = verse.VerseText;
+                verseText = verse.VerseText.ToUpper();
             }
 
             string connectionString = "Server =.; Database = Benchmark; Trusted_Connection = True";

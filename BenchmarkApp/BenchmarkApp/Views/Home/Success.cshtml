@@ -1,6 +1,6 @@
 ﻿
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <!DOCTYPE html>
@@ -11,8 +11,15 @@
     <title>Success</title>
 </head>
 <body>
-    <div> 
+    <div>
+        <hr />
         <h2>Verse Added Successfully!</h2>
+        @using (Html.BeginForm("onNavigation", "Home", FormMethod.Post))
+        {
+            <button type="submit" name="navBtn" value="0">Home</button>
+            <button type="submit" name="navBtn" value="1">Input Verse</button>
+            <button type="submit" name="navBtn" value="2">Search Verse</button>
+        }
     </div>
 </body>
 </html>

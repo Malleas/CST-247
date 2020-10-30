@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Benchmark.Models.Verse">
+    <Position X="6.5" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAABAAAgAAAAAAAAABAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Verse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Benchmark.Controllers.HomeController">
+    <Position X="8.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAASAAAAAAACAAAABAAAAAEAIAAAAAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Benchmark.Services.Business.SecurityService">
+    <Position X="10.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAACAAAACAA=</HashCode>
+      <FileName>Services\Business\SecurityService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Benchmark.Services.Data.VerseDAO">
+    <Position X="12.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAACAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Services\Data\VerseDAO.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Benchmark.Services.Utilities.MyLogger">
+    <Position X="12.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYACAAAAABAAAAgAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Services\Utilities\MyLogger.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.158" />
+  </Class>
+  <Interface Name="Benchmark.Services.Utilities.ILogger">
+    <Position X="10.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYAAAAAAABAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Services\Utilities\ILogger.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -159,7 +159,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Verse.cs" />
-    <Compile Include="Models\VerseObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Business\SecurityService.cs" />
     <Compile Include="Services\Data\VerseDAO.cs" />
@@ -180,6 +179,7 @@
     <Content Include="NLog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Benchmark UML Diagram.cd" />
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>
