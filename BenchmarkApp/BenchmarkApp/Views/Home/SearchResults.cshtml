@@ -1,0 +1,59 @@
+﻿@model List<Benchmark.Models.Verse>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>SearchResults</title>
+</head>
+<body>
+    <div align="center">
+        <h2>Here are your results</h2>
+        <hr />
+        <table border="1">
+            <tr>
+                <th>Testament</th>
+                <th>Book</th>
+                <th>Chapter Number</th>
+                <th>Verse Number</th>
+                <th>Verse Text</th>
+            </tr>
+            @if (Model.Count > 0)
+            {
+                foreach (var verse in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => verse.Testament)</td>
+                        <td>@Html.DisplayFor(modelItem => verse.Book)</td>
+                        <td>@Html.DisplayFor(modelItem => verse.ChapterNumber)</td>
+                        <td>@Html.DisplayFor(modelItem => verse.VerseNumber)</td>
+                        <td>@Html.DisplayFor(modelItem => verse.VerseText)</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td align="center">No records found</td>
+
+                </tr>
+            }
+
+
+
+
+        </table><br />
+        @using (Html.BeginForm("onNavigation", "Home", FormMethod.Post))
+        {
+            <button type="submit" name="navBtn" value="0">Home</button>
+            <button type="submit" name="navBtn" value="1">Input Verse</button>
+            <button type="submit" name="navBtn" value="2">Search Verse</button>
+        }
+    </div>
+</body>
+</html>

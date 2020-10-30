@@ -1,0 +1,23 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Home</title>
+</head>
+<body>
+    <div align="center">
+        @using (Html.BeginForm("OnClick", "Home", FormMethod.Post))
+        {
+            <br />
+            <button type="submit" id="navBtn" name="navBtn" value="0">Input a Verse</button>
+            <button type="submit" id="navBtn" name="navBtn" value="1">Search for a Verse</button>
+        }
+    </div>
+</body>
+</html>
